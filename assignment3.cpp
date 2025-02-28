@@ -39,12 +39,33 @@ int main()
     std::cout<<" "<<std::endl;
 
     //Actv 4
-    // a = 42;                          L value
-    // int x = a + b;                   R value
-    // &a;                              L value
-    // std::string s = c + " World";    R Value
-    // int& refX = x;                   L value
-    // int&& rref = 100;                R value
+/*   
+    a = 42; 
+    a: L value
+    42: R value
+
+    int x = a + b;
+    x: L value
+    a: L value
+    b: L value
+
+    &a; 
+    a: L value            
+
+    std::string s = c + " World";
+    s: L value
+    c: L value
+    "World": R value 
+
+    int& refX = x;   
+    refX: L value
+    x: L value  
+
+    int&& rref = 100;     
+    rref: L value
+    100: R value
+
     
     
-};
+*/
+}
