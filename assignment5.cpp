@@ -23,7 +23,7 @@ void displayInventory(const std::map<std::string, int>& Inventory) {
 void addUpdateInventory(std::map<std::string, int>& inventory){
     std::pair<std::string,int> product;
     std::cout<<"Name of the product:  ";
-    std::getline(std::cin, product.first);
+    std::cin>>product.first;
     std::cout<<"Amount:  ";
     std::cin>>product.second;
     if(inventory[product.first]=product.second){
@@ -48,7 +48,7 @@ void displayCategories(const std::set<std::string>& Categories){
 void addCategories(std::set<std::string>& Categories){
     std::string categorie;
     std::cout<<"Name of the category: ";
-    std::getline(std::cin,categorie);
+    std::cin>>categorie;
     Categories.insert(categorie);
     if (Categories.count(categorie)){
         std::cout<<"Category added correctly!!"<<'\n';
@@ -61,7 +61,7 @@ void addCategories(std::set<std::string>& Categories){
 void addOrders (std::queue<std::string>& Orders){
     std::string order;
     std::cout<<"Enter the order: ";
-    std::getline(std::cin, order);
+    std::cin>>order;
     Orders.push(order);
     std::cout<<"Order added correctly"<<'\n';   
 };
@@ -79,7 +79,7 @@ void processOrders(std::queue<std::string>& Orders){
 void addRestock(std::stack<std::pair<std::string, int>>&Restocks){
     std::pair<std::string, int> restock;
     std::cout<<"Product to restock; ";
-    std::getline(std::cin, restock.first);
+    std::cin>>restock.first;
     std::cout<<"Amount; ";
     std::cin>>restock.second;
     Restocks.push(restock);
@@ -98,7 +98,7 @@ void processRestock(std::stack<std::pair<std::string, int>>&Restocks){
 void addCart(std::vector<std::string>& Cart){
     std::string product;
     std::cout<<"Enter the product: ";
-    std::getline(std::cin,product);
+    std::cin>>product;
     Cart.push_back(product);
 };
 void displayCart(const std::vector<std::string>& Cart){
@@ -124,6 +124,8 @@ int main() {
 
     std::cout<<"Enter an action to the menu:"<<'\n';
     std::cout
+    
+    <<"Type -1 to exit"          <<'\n'
     <<"1. Display Inventory"     <<'\n'
     <<"2. Add to Inventory"      <<'\n'
     <<"3. Update Inventory"      <<'\n'
