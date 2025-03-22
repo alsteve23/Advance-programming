@@ -65,10 +65,12 @@ void addOrders (std::queue<std::string>& Orders){
     Orders.push(order);
     std::cout<<"Order added correctly"<<'\n';   
 };
+//esta función procesa las ordenes del cliente, eliminandolas de la cola.
 void processOrders(std::queue<std::string>& Orders){
     while (!Orders.empty()) {
         std::cout << "Processing " << Orders.front() << std::endl;
         Orders.pop();
+        
     };
     if(Orders.empty()){
         std::cout<<"Orders processed correctly!!"<<'\n';
